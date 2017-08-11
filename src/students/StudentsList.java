@@ -41,18 +41,28 @@ public class StudentsList {
     }
 
     public static void main(String[] args){
-        StudentsList arr[]=new StudentsList[10];
+    	System.out.println(" Add new student? ");
+    	System.out.println(" 1-Yes ");
+    	System.out.println(" 2-No ");
+        Scanner scan = new Scanner(System.in);
+        int choose=scan.nextInt();
+        int numb=0;
+        String surname;
+        String name;
+        int gr=0;
+        ArrayList<StudentsList> studs = new ArrayList<StudentsList>();
+    	while (choose !=2 ){
+        StudentsList arr[]=new StudentsList[];
         //arr[0]=new StudentsList() ;
         //arr[0].setInf("Ванек","Сидоров",67);
         //arr[0]=new StudentsList();
         //StudentsList stud=new StudentsList();
         //stud.setInf("Пупкин","Вася",45);
         //System.out.print(arr[0].getGroup());
-        ArrayList<StudentsList> studs= new ArrayList<StudentsList>();
         studs.add(new StudentsList());
-        studs.get(0).setInf("Пупкин","Вася",5);
-        System.out.print(studs.get(0).getGroup());
+        studs.get(numb).setInf("Пупкин","Вася",5);
+        System.out.print(studs.get(numb).getGroup());
+        numb++;
     }
-    
-
+    }
 }
